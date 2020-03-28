@@ -1,0 +1,106 @@
+/* 手机 */
+
+@media screen and (max-width:768px) {
+    header .container .right {
+        text-align: left;
+    }
+    header .left {
+        text-align: center;
+    }
+    .lbt-box .lbt-left div {
+        width: 100%;
+    }
+    .artice-left .artice-left-nav li {
+        padding: 0 15px;
+        font-size: 14px;
+    }
+    .artice-box .content {
+        font-size: 14px!important;
+    }
+    .special-list li {
+        width: 50%!important;
+    }
+    .artice-list h4 {
+        font-size: 16px!important;
+    }
+    .artice-list p {
+        font-size: 14px!important;
+    }
+    .f-right dd {
+        font-size: 8px;
+        margin-top: 14px;
+    }
+}
+
+
+/* 平板 */
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    header .container .right {
+        float: right;
+        text-align: text;
+    }
+    header .left {
+        text-align: center;
+    }
+    .lbt-left p {
+        font-size: 14px;
+    }
+    .special-list li {
+        width: 50%!important;
+    }
+    .f-right dd {
+        margin-top: 14px;
+    }
+}
+
+
+/* 笔记本 */
+
+
+/* 如果屏幕的设备>=992px并且<1200那么显示黄色 */
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    header .container li {
+        padding: 0 14px;
+    }
+    .lbt-left p {
+        font-size: 14px;
+    }
+    .lbt-right div p {
+        font-size: 12px;
+    }
+    .lbt-right div ul li {
+        width: 53px;
+        height: 43px;
+        padding: 0 5px;
+        line-height: 43px;
+    }
+    .lbt-right div li:first-child {
+        margin-left: 8px;
+    }
+    .lbt-right div ul li a {
+        font-size: 24px;
+    }
+    .ranking-img span {
+        font-size: 14px!important;
+    }
+    .ab-left p {
+        font-size: 14px!important;
+    }
+}
+
+
+/* 台式 */
+
+
+/* min-width是>=  如果屏幕 >=1200那么 */
+
+
+/* max-width是< 也就是最大不能超过多少 */
+
+@media screen and (min-width:1200px) {
+    .container {
+        width: 1200px;
+    }
+}

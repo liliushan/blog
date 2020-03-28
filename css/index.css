@@ -1,0 +1,1050 @@
+/* 顶部背景渐变 */
+
+.bg {
+    width: 100%;
+    height: 8px;
+    background: -webkit-linear-gradient(right, red, #2199E9, yellow);
+}
+
+
+/* 公共的样式 */
+
+body {
+    background-color: #E9EAED;
+    color: #fff;
+    font-size: 16px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:focus,
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+    height: 25px;
+    line-height: 25px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h2,
+h3 {
+    margin: 0;
+}
+
+.container {
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+}
+
+
+/* 选择class以col开头的元素 */
+
+[class^="col"] {
+    padding: 0;
+}
+
+
+/* 给导航添加下边框 */
+
+.artice-box-border::after {
+    /* 给当前的li添加伪元素 */
+    content: "";
+    background: #000;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+/* 添加文章的一些简介 */
+
+
+/* 给li添加上这个类实现高度和文本简介的显示 */
+
+.artice-box .content .content-info {
+    height: 85px!important;
+    background: #f7f7f7;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+
+/* 当添加了.content-info这个类那么会自动为这个li添加... */
+
+.artice-box .content .content-info::after {
+    content: "...";
+    position: absolute;
+    right: 30px;
+    bottom: -5px;
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.show {
+    display: block;
+}
+
+.scale {
+    transform: scale(1.1);
+}
+
+.box-s {
+    box-shadow: 0 0 10px #ccc;
+    transition: all .2s ease;
+}
+
+.lbt-left section .circle {
+    background-color: #12B7DE;
+}
+
+
+/* 个人博客Logo */
+
+header {
+    background-color: #1C2327;
+    height: 50px;
+    overflow: hidden;
+    line-height: 50px;
+}
+
+header .left {
+    font-size: 22px;
+}
+
+
+/* 导航栏 */
+
+header li {
+    float: left;
+}
+
+header ul {
+    overflow: hidden;
+}
+
+header ul li {
+    padding: 0 20px;
+}
+
+
+/* 登陆注册 */
+
+header .right {
+    text-align: right;
+}
+
+
+/* 轮播图模块 */
+
+
+/* 这里使用百分比的好处主要是因为是响应式网页让轮播图根据浏览器窗口大小变化调整变化 */
+
+.lbt-box {
+    margin-top: 20px;
+}
+
+.lbt-left {
+    height: 260px;
+}
+
+
+/* 轮播图左边 */
+
+.lbt-left div {
+    width: 68.5%;
+    float: left;
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+}
+
+.lbt-left div ul {
+    width: 500%;
+    height: 260px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.3s;
+}
+
+.lbt-left div ul li {
+    width: 20%;
+    float: left;
+    border-radius: 5px;
+    height: 260px;
+    position: relative;
+}
+
+.lbt-left div ul li a {
+    width: 100%;
+    height: 100%;
+}
+
+.lbt-left div ul li img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 左右箭头 */
+
+.arr-l,
+.arr-r {
+    display: block;
+    width: 42px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 34px;
+    text-align: center;
+    color: #fff;
+    transition: all 1.3s;
+    cursor: pointer;
+    display: none;
+    user-select: none;
+}
+
+.arr-l {
+    position: absolute;
+    left: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arr-r {
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* 瞄点 */
+
+.lbt-left section {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    height: 10px;
+}
+
+.lbt-left section p {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 7px;
+    float: left;
+}
+
+
+/* 轮播图右边 */
+
+.lbt-left>ul {
+    float: right;
+    width: 30%;
+    height: 260px;
+}
+
+.lbt-left>ul li {
+    width: 100%;
+    height: 125px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.lbt-left>ul li:first-child {
+    margin-bottom: 10px;
+}
+
+.lbt-left>ul li img {
+    width: 100%;
+    height: 100%;
+    float: right;
+    transition: all 1s;
+}
+
+
+/* 轮播图上的文字部分 */
+
+.lbt-left ul:last-child p {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    /* transform: translateY(-50%) 如果只给一个参数那么会移动盒子自己的一半 */
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 0 15%;
+}
+
+.lbt-right {
+    height: 260px;
+    padding-left: 20px;
+}
+
+.lbt-right div {
+    width: 100%;
+    height: 260px;
+    background-color: #2A2A2A;
+}
+
+.lbt-right h2 {
+    color: #89919a;
+    font-weight: normal;
+    font-size: 22px;
+    padding: 20px 10px 10px 10px;
+}
+
+.lbt-right p {
+    color: #d0d2d4;
+    font-size: 14px;
+    margin: 10px 10px 5px 30px;
+}
+
+.lbt-right li {
+    width: 63px;
+    float: left;
+    text-align: center;
+    height: 53px;
+    line-height: 53px;
+    padding: 0 5px;
+}
+
+.lbt-right li:first-child {
+    margin-left: 15px;
+}
+
+.lbt-right li a {
+    display: block;
+    font-size: 30px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 1) inset;
+    border-radius: 50%;
+}
+
+
+/* 文章导航部分 */
+
+.artice-box {
+    width: 100%;
+    overflow: hidden;
+}
+
+.artice-left {
+    margin-top: 15px;
+    background-color: #fff;
+    padding: 20px;
+    float: left;
+}
+
+.news {
+    width: 100%;
+    float: left;
+}
+
+.news {
+    display: none;
+}
+
+.artice-left-nav {
+    overflow: hidden;
+    border-bottom: #e4e3e3 1px solid;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.artice-left-nav li {
+    float: left;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.artice-box a {
+    color: #333;
+}
+
+
+/* 图片介绍 */
+
+.artice-box .ab-left {
+    width: 32%;
+    margin-top: 10px;
+    float: left;
+    overflow: hidden;
+}
+
+.artice-box .news .ab-left li {
+    height: 100px;
+    width: 100%;
+}
+
+.artice-box .ab-left li {
+    height: 100px;
+    margin-bottom: 10px;
+    background-color: red;
+    position: relative;
+}
+
+.artice-box .ab-left li img {
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+}
+
+.artice-box .ab-left li p {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 0 15%;
+}
+
+
+/* 文字说明部分 */
+
+.artice-box .content {
+    width: 66%;
+    height: 220px;
+    float: right;
+    color: #333;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 32px;
+}
+
+.artice-box .content li {
+    height: 32px;
+    padding: 0 30px;
+    position: relative;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.artice-box .content li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    background-color: #9A9A9A;
+    transform: translateY(-50%);
+}
+
+.content p {
+    display: none;
+}
+
+.artice-box .content li:nth-child(1)::before {
+    content: "1";
+}
+
+.artice-box .content li:nth-child(2)::before {
+    content: "2";
+}
+
+.artice-box .content li:nth-child(3)::before {
+    content: "3";
+}
+
+.artice-box .content li:nth-child(4)::before {
+    content: "4";
+}
+
+.artice-box .content li:nth-child(5)::before {
+    content: "5";
+}
+
+.artice-box .content li:last-child {
+    margin-bottom: 0;
+}
+
+
+/* 文章部分右边 */
+
+.artice-right {
+    padding-left: 20px;
+    height: 312px;
+    margin-top: 15px;
+    color: #333;
+}
+
+.artice-right div {
+    padding: 20px;
+    height: 312px;
+    background-color: #fff;
+}
+
+h3 {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #484848;
+    border-bottom: #e4e3e3 1px solid;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+h3::after {
+    content: "";
+    background: #000;
+    width: 66px;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.artice-right ul {
+    padding-top: 18px;
+}
+
+.artice-right li {
+    height: 38px;
+    line-height: 30px;
+    background: #f6f6f6;
+    font-size: 12px;
+    margin-bottom: 12px;
+    padding: 4px 12px 4px 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    transition: all 1s;
+}
+
+.artice-right li::before {
+    content: "";
+    width: 3px;
+    height: 3px;
+    background: #000;
+    border-radius: 10px;
+    position: absolute;
+    left: 15px;
+    top: 20px;
+}
+
+
+/* 精彩专题部分 */
+
+.special-box {
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.special-left {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.special-right {
+    height: 675px;
+    padding-left: 20px;
+}
+
+.special-right .sp-box {
+    height: 645px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.ranking {
+    border-bottom: 1px solid #e4e3e3;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.special-right h2 {
+    height: 26px;
+    line-height: 26px;
+    font-size: 16px;
+    color: #484848;
+    float: left;
+    position: relative;
+}
+
+.ranking-img {
+    width: 100%;
+    height: 110px;
+    position: relative;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.ranking-list li {
+    transition: all 1s;
+}
+
+.ranking-img img {
+    width: 100%;
+    transition: all 1s;
+}
+
+.ranking-img span {
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.special-right li {
+    height: 30px;
+    padding-left: 24px;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: relative;
+    background-color: #F6F6F6;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.special-right li a {
+    color: #333;
+}
+
+.special-right li i {
+    font-size: 9px;
+    color: #fff;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    background-color: #B1B1B1;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.special-nav {
+    overflow: hidden;
+    border-bottom: 1px solid #e4e3e3;
+    margin-bottom: 10px;
+}
+
+.special-nav h2 {
+    font-size: 16px;
+    height: 24px;
+    line-height: 24px;
+    color: #484848;
+    float: left;
+    position: relative;
+}
+
+.special-nav ul {
+    float: right;
+}
+
+.special-nav li {
+    font-size: 16px;
+    height: 24px;
+    line-height: 24px;
+    float: left;
+    padding: 0 15px;
+    position: relative;
+}
+
+.special-nav li::after {
+    content: "/";
+    position: absolute;
+    bottom: 0;
+    font-size: 16px;
+    right: 0;
+    color: #ccc;
+}
+
+.special-nav li a {
+    color: #333;
+}
+
+
+/* 专题列表 */
+
+.special-list {
+    overflow: hidden;
+}
+
+.special-list li {
+    float: left;
+    width: 33%;
+    height: 285px;
+    padding: 20px;
+    background-color: #fff;
+    border-right: #eee 1px solid;
+    transition: all 1s;
+    overflow: hidden;
+}
+
+.special-list li a:first-child {
+    display: block;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.special-list li:hover {
+    background: #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+    transform: translateY(-6px);
+}
+
+
+/* 
+n默认等于0
+  n+3 = 3 代表从第三个元素开始到最后
+  -n+3 = -3 代表从第三个元素到第一个元素
+
+*/
+
+.special-list li:nth-child(-n+3) {
+    border-bottom: #eee 1px solid;
+}
+
+.special-list li:nth-child(3),
+.special-list li:nth-child(6) {
+    border-right: none;
+}
+
+.special-list li a {
+    overflow: hidden;
+}
+
+.special-list li img {
+    height: 100px;
+    width: 100%;
+    transition: all 1s;
+}
+
+.special-list li p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+    color: #333;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.special-list li span {
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    font-size: 14px;
+    height: 62px;
+    margin-bottom: 10px;
+}
+
+.special-list li a:last-child {
+    padding-left: 15px;
+    color: #009966;
+    font-size: 15px;
+    position: relative;
+}
+
+.special-list li a:last-child::before {
+    content: "+";
+    font-size: 15px;
+    color: #009966;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* 博客模板 */
+
+.template-box {
+    margin-top: 15px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.blog-template {
+    padding: 20px;
+    height: 170px;
+    background-color: #fff;
+    float: left;
+}
+
+.blog-template img {
+    width: 100%;
+    height: 100%;
+}
+
+.blog-template-right {
+    height: 170px;
+    float: right;
+    padding-left: 20px;
+}
+
+.blog-template-right div {
+    padding: 20px;
+    height: 170px;
+    background-color: #fff;
+}
+
+.blog-template-right img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 最新博客模块 */
+
+.newest {
+    overflow: hidden;
+}
+
+.latest-blog {
+    float: left;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.website-info {
+    float: right;
+    padding-left: 20px;
+    color: #333333;
+}
+
+.website-info .wi {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.website-info img {
+    display: block;
+    width: 194px;
+    height: 194px;
+    margin: 0 auto;
+}
+
+.wi-title {
+    border-bottom: 1px solid #e4e3e3;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.website-info h2 {
+    position: relative;
+    height: 42px;
+    line-height: 42px;
+    font-size: 16px;
+    color: #333;
+    float: left;
+}
+
+.website-info p {
+    margin-bottom: 10px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 14px;
+}
+
+.website-info span {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.lb-title {
+    overflow: hidden;
+    border-bottom: 1px solid #e4e3e3;
+    margin-bottom: 15px;
+}
+
+.latest-blog h2 {
+    height: 42px;
+    float: left;
+    line-height: 42px;
+    font-size: 16px;
+    color: #484848;
+    position: relative;
+}
+
+.artice-list {
+    color: #333;
+    overflow: hidden;
+}
+
+.artice-list div {
+    overflow: hidden;
+}
+
+.artice-list li {
+    padding-bottom: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-bottom: #eee 1px dashed;
+}
+
+.artice-list li:last-child {
+    margin-bottom: 0;
+}
+
+.artice-list h4 {
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.artice-list a {
+    width: 23.2%;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.artice-list a img {
+    width: 100%;
+    transition: all 1s;
+}
+
+.artice-list p {
+    width: 75%;
+    height: 74px;
+    display: block;
+    float: right;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.publisher {
+    margin-top: 15px;
+    overflow: hidden;
+    height: 34px;
+    width: 100%;
+}
+
+.publisher-left {
+    float: left;
+}
+
+.publisher-left i {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #56DAE0;
+}
+
+.publisher-left i img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 2px;
+}
+
+.publisher-left span {
+    line-height: 34px;
+    margin-left: 20px;
+    font-size: 15px;
+    color: #999;
+}
+
+.publisher-left span:last-child {
+    color: #009966;
+}
+
+.publisher-right {
+    height: 34px;
+    width: 80px;
+    text-align: center;
+    line-height: 34px;
+    float: right;
+    background-color: #12b7de;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+}
+
+
+/* 网页底部 */
+
+footer {
+    height: 191px;
+    background-color: #373D41;
+    margin-top: 20px;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.f-left {
+    float: left;
+    overflow: hidden;
+}
+
+.f-left li {
+    width: 100px;
+    height: 120px;
+    float: left;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.f-left li img {
+    /* 如果只给宽度那么高度和宽度等比例 */
+    width: 100%;
+}
+
+dl {
+    margin-left: 10px;
+    height: 100px;
+    margin-left: 20px;
+}
+
+dt {
+    font-size: 16px;
+    color: #00c1de;
+    font-weight: 600;
+}
+
+dd {
+    color: #73777a;
+    font-size: 14px;
+    margin-top: 6px;
+}
